@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<main class="contact-page">
+
+  <div class="contact-layout">
+
+    <!-- PIXEL CHARACTER -->
+    <div class="contact-character">
+      <img src="assets/portfolio-character-mumtaz.png" alt="Pixel character">
+    </div>
+
+    <!-- CONTACT INFO CARD -->
+    <div class="contact-panel card">
+      <h2>CONTACT INFO</h2>
+      <ul>
+        <li>📧 Email: <a href="mailto:masheikhaden@gmail.com">Masheikhaden@gmail.com</a></li>
+        <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/mumtaz-sheikhaden/" target="_blank">Mumtaz's LinkedIn</a></li>
+        <li>📝 Resume: <a href="assets/Mumtaz's Resumé .pdf" target="_blank">Download Resumé</a></li>
+        <li>🐙 GitHub: <a href="https://github.com/mumtaz-9" target="_blank">Mumtaz Sheikhaden's Github</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT FORM CARD -->
+    <div class="contact-panel card">
+      <h2>SEND A MESSAGE</h2>
+      <form id="contact-form">
+        <label>Name:<br>
+          <input type="text" name="name" required>
+        </label><br><br>
+        <label>Email:<br>
+          <input type="email" name="email" required>
+        </label><br><br>
+        <label>Message:<br>
+          <textarea name="message" rows="4" required></textarea>
+        </label><br><br>
+        <button type="submit">Send →</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- NAV -->
+  <nav class="project-nav">
+    <a href="index.html">← BACK TO PROJECTS</a>
+  </nav>
+
+</main>
+<script src="contact.js"></script>
+
+</body>
+</html>

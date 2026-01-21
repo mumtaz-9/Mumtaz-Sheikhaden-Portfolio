@@ -1,0 +1,379 @@
+:root {
+  --pixel: 8px;
+  --green: #00ff88;
+}
+
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  image-rendering: pixelated;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: black;
+  color: var(--green);
+  font-family: 'Press Start 2P', monospace;
+  overflow-x: hidden;
+}
+
+/* BOOT SCREEN */
+#boot-screen {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.blink {
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* GAME AREA */
+#game {
+  position: relative;
+}
+
+/* HERO CHARACTER */
+#hero {
+  width: 64px;
+  height: 64px;
+
+  position: absolute;
+  top: 120px; /* relative to projects */
+  left: -80px;
+
+  background-image: url("assets/sprites/hijab_walk.png");
+  background-size: cover;
+
+  animation: walk 0.6s steps(4) infinite;
+}
+
+@keyframes walk {
+  from { background-position: 0 0; }
+  to { background-position: -256px 0; }
+}
+
+@keyframes idle {
+  50% { transform: translateY(-2px); }
+}
+
+/* SECTIONS */
+.section {
+  max-width: 900px;
+  margin: calc(var(--pixel) * 6) auto;
+  padding: calc(var(--pixel) * 4);
+  border: 4px solid var(--green);
+}
+
+#projects-anchor {
+  position: relative;
+  top: -40px; /* fine-tune scroll position */
+}
+
+#boot-screen {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  transition: opacity 0.6s ease;
+}
+
+#boot-screen.inactive {
+  opacity: 0.3;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  transform-origin: left center;
+}
+
+.card:hover {
+  transform: translate(8px, -6px) rotateX(4deg) rotateY(-6deg);
+  box-shadow:
+    -4px 4px 0 #007744,
+    -8px 8px 0 #005533,
+    -12px 12px 12px rgba(0, 255, 136, 0.25);
+}
+
+.card:active {
+  transform: translate(4px, -2px);
+  box-shadow:
+    -2px 2px 0 #005533;
+}
+
+.projects-page {
+  padding: calc(var(--pixel) * 6);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: calc(var(--pixel) * 4);
+}
+
+.project-card {
+  border: 4px solid var(--green);
+  padding: calc(var(--pixel) * 3);
+  background: black;
+}
+
+.progress-bar {
+  height: 16px;
+  border: 2px solid var(--green);
+  margin: calc(var(--pixel) * 2) 0;
+}
+
+.progress {
+  height: 100%;
+  background: var(--green);
+}
+
+.status {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* ABOUT PAGE STACKED SECTIONS */
+.about-page section {
+  margin-top: calc(var(--pixel) * 6);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: calc(var(--pixel) * 6);
+  padding: calc(var(--pixel) * 6);
+  align-items: center;
+}
+
+.about-character {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 92px;
+}
+
+.about-panel {
+  border: 4px solid var(--green);
+  padding: calc(var(--pixel) * 4);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-window {
+  width: min(480px, 90%);
+  padding: calc(var(--pixel) * 4);
+  background: black;
+  border: 4px solid var(--green);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: black;
+  color: var(--green);
+  border: 2px solid var(--green);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.modal-cta {
+  display: inline-block;
+  margin-top: calc(var(--pixel) * 3);
+  color: var(--green);
+  text-decoration: none;
+}
+
+/* PROJECT PAGE */
+.project-page {
+  max-width: 960px;
+  margin: auto;
+  padding: calc(var(--pixel) * 6);
+}
+
+.project-header {
+  margin-bottom: calc(var(--pixel) * 6);
+}
+
+.project-tagline {
+  opacity: 0.8;
+  font-size: 10px;
+}
+
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: calc(var(--pixel) * 3);
+  margin-bottom: calc(var(--pixel) * 6);
+  border: 4px solid var(--green);
+  padding: calc(var(--pixel) * 3);
+}
+
+.project-meta div {
+  line-height: 1.4;
+}
+
+.project-hero img {
+  width: 100%;
+  border: 4px solid var(--green);
+  margin-bottom: calc(var(--pixel) * 6);
+  border: 4px solid var(--green);
+  padding: calc(var(--pixel) * 3);
+}
+
+.project-section {
+  margin-bottom: calc(var(--pixel) * 6);
+  border: 4px solid var(--green);
+  padding: calc(var(--pixel) * 3);
+}
+
+.project-section p {
+  line-height: 1.6;
+}
+
+.project-section ul {
+  line-height: 1.6;
+}
+
+.project-section h2 {
+  margin-bottom: calc(var(--pixel) * 2);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: calc(var(--pixel) * 3);
+  margin-bottom: calc(var(--pixel) * 6);
+}
+
+.project-gallery img {
+  width: 100%;
+  border: 4px solid var(--green);
+  padding: calc(var(--pixel) * 1);
+  height: 100%;
+}
+
+.project-nav {
+  margin-top: calc(var(--pixel) * 8);
+  text-align: center;
+}
+
+.hobby-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.hobby-card [disabled] {
+  padding: 24px;
+  text-align: center;
+  border: 4px solid var(--green);
+  cursor: pointer;
+}
+
+.hobby-gallery {
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+}
+
+/* UPDATED CONTACT LAYOUT */
+.contact-layout {
+  max-width: 800px; /* Adjust this to match the width of your hobby cards */
+  margin: 0 auto;
+  padding: calc(var(--pixel) * 6);
+
+  /* Changed from 1fr 2fr to a single column for centering */
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--pixel) * 6);
+  align-items: center; /* Centers items horizontally */
+}
+
+.contact-character {
+  display: flex;
+  justify-content: center; /* Center the character above the panels */
+  width: 100%;
+}
+
+.contact-character img {
+  width: 120px; /* Optional: adjust size if needed */
+  height: auto;
+}
+
+.contact-panel {
+  width: 100%; /* Makes the panel fill the max-width of contact-layout */
+  border: 4px solid var(--green);
+  padding: calc(var(--pixel) * 4);
+  background: black;
+}
+
+.contact-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Ensure form elements don't feel too cramped */
+.contact-panel label {
+  display: block;
+  width: 100%;
+}
+
+.contact-panel input,
+.contact-panel textarea {
+  width: 100%;
+  background: black;
+  border: 2px solid var(--green);
+  color: var(--green);
+  font-family: inherit;
+  padding: 12px; /* Slightly more padding for better UX */
+  margin-top: 8px;
+}
+
+.contact-panel button {
+  align-self: center;
+  background: black;
+  color: var(--green);
+  border: 4px solid var(--green); /* Made border thicker to match retro style */
+  padding: 12px 24px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-panel button:hover {
+  background: var(--green);
+  color: black;
+}
