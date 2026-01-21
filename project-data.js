@@ -7,6 +7,7 @@ const PROJECTS = {
     duration: "Dec 2024 - Present",
     tools: ["Figma", "React", "Supabase", "Tailwind CSS"],
     status: "40% Complete til MVP",
+//test
     hero: "assets/StudyBuddy-1.png",
     overview: "StudyBuddy is a collaborative learning platform designed to help students find reliable, cost-effective peer tutors and connect based on shared courses and skill exchange. The project aims to enhance the quality of tutoring by pairing students with tutors who are best suited to their individual academic needs. In addition, StudyBuddy centralizes study resources to reduce the barriers students often face when searching for support materials, making academic help more accessible and equitable.",
     process: ["Identify student pain points around studying",
