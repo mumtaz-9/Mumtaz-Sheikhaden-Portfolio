@@ -292,15 +292,13 @@ body {
   text-align: center;
 }
 
-a {
-  color: var(--green);
-}
-
-
-.project-nav a {
-  margin-top: calc(var(--pixel) * 8);
-  text-align: center;
-  color: var(--green);
+.project-nav a,
+.project-nav a:visited,
+.project-nav a:hover,
+.project-nav a:active {
+  color: var(--green) !important;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .hobby-grid {
