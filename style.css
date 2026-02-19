@@ -214,6 +214,10 @@ body {
   text-decoration: none;
 }
 
+#modal-description {
+  line-height: 1.4;
+}
+
 /* PROJECT PAGE */
 .project-page {
   max-width: 960px;
@@ -286,6 +290,12 @@ body {
 .project-nav {
   margin-top: calc(var(--pixel) * 8);
   text-align: center;
+}
+
+.project-nav a {
+  margin-top: calc(var(--pixel) * 8);
+  text-align: center;
+  color: var(--green);
 }
 
 .hobby-grid {
