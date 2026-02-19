@@ -299,6 +299,7 @@ body {
   color: var(--green) !important;
   text-decoration: none;
   display: inline-block;
+  text-underline-offset: 4px;
 }
 
 .hobby-grid {
