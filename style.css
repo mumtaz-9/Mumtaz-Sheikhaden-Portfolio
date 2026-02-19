@@ -215,7 +215,7 @@ body {
 }
 
 #modal-description {
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 /* PROJECT PAGE */
@@ -291,6 +291,11 @@ body {
   margin-top: calc(var(--pixel) * 8);
   text-align: center;
 }
+
+a {
+  color: var(--green);
+}
+
 
 .project-nav a {
   margin-top: calc(var(--pixel) * 8);
