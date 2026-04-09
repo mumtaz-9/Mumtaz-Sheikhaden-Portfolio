@@ -8,6 +8,11 @@ const linkEl = document.getElementById("modal-link");
 
 /* PROJECT DATA FOR MODAL */
 const projects = {
+  navable: {
+    title: "NavAble",
+    description: "An accessible UW campus navigation application.",
+    progress: "40%"
+  },
   studybuddy: {
     title: "StudyBuddy",
     description: "A peer to peer student collaboration platform.",

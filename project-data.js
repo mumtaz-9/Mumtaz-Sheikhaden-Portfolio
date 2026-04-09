@@ -1,5 +1,56 @@
 // PROJECT DATA (same skeleton data, can be shared or imported)
 const PROJECTS = {
+  navable: {
+    title: "NavAble",
+    tagline: "An accessible UW campus navigation application.",
+    role: "UX Designer / Researcher",
+    duration: "Jan 2026 - Present",
+    tools: ["Figma", "React Native", "Google Api"],
+    status: "40% Complete til MVP",
+//test
+    hero: "assets/Screenshot 2026-04-08 at 11.57.25 PM.png",
+    overview: "NavAble is an accessibility focused navigation platform designed to help students, faculty, and visitors navigate the University of Washington campus with safety. The app provides customizable routing based on individual accessibility needs, such as step free paths, elevator access, and low traffic routes. By integrating real time alerts, community reported hazards, and detailed building information, NavAble reduces uncertainty and improves mobility for underserved users, including those with disabilities, anxiety, or unfamiliarity with the campus.",
+problem: "The University of Washington campus presents accessibility and safety challenges due to steep terrain, frequent construction, and limited visibility of accessible entrances. Existing navigation tools rely on static maps and do not account for real time disruptions or diverse user needs, forcing users to piece together information across multiple platforms and increasing cognitive and physical strain.",
+goals: [
+    "Provide reliable, accessibility aware navigation across campus",
+    "Reduce uncertainty through real time alerts and hazard reporting",
+    "Centralize accessibility, safety, and building information",
+    "Support diverse user needs through customizable preferences"
+  ],
+    process: ["Identify accessibility and navigation pain points on campus",
+              "Conduct research on existing navigation tools and accessibility gaps",
+              "Map user journeys and develop wireframes for key features",
+              "Design accessible UI and customizable user preference systems",
+              "Develop core features such as routing, alerts, and reporting",
+              "Test usability and refine based on user feedback and real world scenarios"],
+team_contributions: "As a team, we conducted research, defined the problem space, and collaborated on feature prioritization and design decisions. We worked together to align on accessibility goals, develop wireframes, and ensure the product addressed real user needs through iterative feedback and discussion.",
+
+  individual_contributions: "I contributed as a UX Designer and Researcher by helping define user needs, developing wireframes and interface designs, and focusing on accessibility in the user experience. I also participated in usability testing and translated research insights into design improvements, strengthening my ability to design for inclusive and real world scenarios.",
+
+  key_features: [
+    "Accessibility aware routing with ramps, elevators, and entrances",
+    "Real time hazard and obstruction reporting",
+    "Customizable accessibility preferences",
+    "Interactive 2D/3D campus map",
+    "Building information and accessibility layers"
+  ],
+    gallery: ["assets/Screenshot 2026-04-08 at 11.55.53 PM.png", "assets/Screenshot 2026-04-08 at 11.56.13 PM.png"],
+    outcome: "NavAble establishes a foundation for a more inclusive and responsive campus navigation experience. Early insights highlight the importance of real time information, accessibility aware routing, and community driven updates. Next steps include developing a functional MVP, validating routing accuracy and usability, and preparing for broader campus testing and potential expansion.",
+next_steps: [
+    "Develop and test a functional MVP",
+    "Validate routing accuracy and accessibility features",
+    "Refine UI for accessibility (contrast, screen reader support)",
+    "Conduct broader user testing across campus",
+    "Prepare for potential launch and future feature expansion"
+  ],
+
+  learnings: [
+    "Accessibility extends beyond physical design to include digital interfaces",
+    "Real time data significantly impacts user trust and usability",
+    "Designing for edge cases improves the experience for all users",
+    "Collaboration is essential when solving complex, real world problems"
+  ]
+  },
   studybuddy: {
     title: "StudyBuddy",
     tagline: "A peer to peer student collaboration platform.",

@@ -28,6 +28,83 @@ document.getElementById("project-overview").querySelector("p").textContent = pro
 
 // Add this at the bottom of your project-page.js file
 
+// PROBLEM
+if (project.problem) {
+  const section = document.getElementById("project-problem");
+  section.style.display = "block";
+  section.querySelector("p").textContent = project.problem;
+}
+
+// GOALS
+if (project.goals && project.goals.length) {
+  const section = document.getElementById("project-goals");
+  const ul = section.querySelector("ul");
+
+  project.goals.forEach(goal => {
+    const li = document.createElement("li");
+    li.textContent = goal;
+    ul.appendChild(li);
+  });
+
+  section.style.display = "block";
+}
+
+// FEATURES
+if (project.key_features && project.key_features.length) {
+  const section = document.getElementById("project-features");
+  const ul = section.querySelector("ul");
+
+  project.key_features.forEach(feature => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    ul.appendChild(li);
+  });
+
+  section.style.display = "block";
+}
+
+// TEAM CONTRIBUTIONS
+if (project.team_contributions) {
+  const section = document.getElementById("project-team");
+  section.style.display = "block";
+  section.querySelector("p").textContent = project.team_contributions;
+}
+
+// INDIVIDUAL CONTRIBUTIONS
+if (project.individual_contributions) {
+  const section = document.getElementById("project-individual");
+  section.style.display = "block";
+  section.querySelector("p").textContent = project.individual_contributions;
+}
+
+// NEXT STEPS
+if (project.next_steps && project.next_steps.length) {
+  const section = document.getElementById("project-next");
+  const ul = section.querySelector("ul");
+
+  project.next_steps.forEach(step => {
+    const li = document.createElement("li");
+    li.textContent = step;
+    ul.appendChild(li);
+  });
+
+  section.style.display = "block";
+}
+
+// LEARNINGS
+if (project.learnings && project.learnings.length) {
+  const section = document.getElementById("project-learnings");
+  const ul = section.querySelector("ul");
+
+  project.learnings.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+
+  section.style.display = "block";
+}
+
 // Video Logic
 if (project.video) {
   const videoSection = document.getElementById("project-video-section");
