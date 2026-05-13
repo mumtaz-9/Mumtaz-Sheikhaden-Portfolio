@@ -24,15 +24,34 @@ document.querySelector(".project-meta").innerHTML = `
 `;
 
 // Overview
-document.getElementById("project-overview").querySelector("p").textContent = project.overview || "";
+const overviewSection = document.getElementById("project-overview");
+overviewSection.innerHTML = "<h2>OVERVIEW</h2>";
+
+(project.overview || []).forEach(paragraph => {
+  const p = document.createElement("p");
+  p.textContent = paragraph;
+  overviewSection.appendChild(p);
+});
 
 // Add this at the bottom of your project-page.js file
 
 // PROBLEM
-if (project.problem) {
-  const section = document.getElementById("project-problem");
-  section.style.display = "block";
-  section.querySelector("p").textContent = project.problem;
+if (project.problem && project.problem.length) {
+
+  const problemSection = document.getElementById("project-problem");
+
+  // show section
+  problemSection.style.display = "block";
+
+  // keep heading
+  problemSection.innerHTML = "<h2>PROBLEM</h2>";
+
+  // add paragraphs
+  project.problem.forEach(paragraph => {
+    const p = document.createElement("p");
+    p.textContent = paragraph;
+    problemSection.appendChild(p);
+  });
 }
 
 // GOALS
@@ -64,17 +83,45 @@ if (project.key_features && project.key_features.length) {
 }
 
 // TEAM CONTRIBUTIONS
-if (project.team_contributions) {
-  const section = document.getElementById("project-team");
-  section.style.display = "block";
-  section.querySelector("p").textContent = project.team_contributions;
+
+
+if (project.team_contributions && project.team_contributions.length) {
+
+  const contributionSection = document.getElementById("project-team");
+
+  // show section
+  contributionSection.style.display = "block";
+
+  // keep heading
+  contributionSection.innerHTML = "<h2>Team Contributions</h2>";
+
+  // add paragraphs
+  project.team_contributions.forEach(paragraph => {
+    const p = document.createElement("p");
+    p.textContent = paragraph;
+    contributionSection.appendChild(p);
+  });
 }
 
+
 // INDIVIDUAL CONTRIBUTIONS
-if (project.individual_contributions) {
-  const section = document.getElementById("project-individual");
-  section.style.display = "block";
-  section.querySelector("p").textContent = project.individual_contributions;
+
+if (project.individual_contributions && project.individual_contributions.length) {
+
+  const individualSection = document.getElementById("project-individual");
+
+  // show section
+  individualSection.style.display = "block";
+
+  // keep heading
+  individualSection.innerHTML = "<h2>Individual Contributions</h2>";
+
+  // add paragraphs
+  project.individual_contributions.forEach(paragraph => {
+    const p = document.createElement("p");
+    p.textContent = paragraph;
+    individualSection.appendChild(p);
+  });
 }
 
 // NEXT STEPS
@@ -155,4 +202,21 @@ gallery.innerHTML = "";
 });
 
 // Outcome
-document.getElementById("project-outcome").querySelector("p").textContent = project.outcome || "";
+
+if (project.outcome && project.outcome.length) {
+
+  const outcomeSection = document.getElementById("project-outcome");
+
+  // show section
+  outcomeSection.style.display = "block";
+
+  // keep heading
+  outcomeSection.innerHTML = "<h2>Outcome</h2>";
+
+  // add paragraphs
+  project.outcome.forEach(paragraph => {
+    const p = document.createElement("p");
+    p.textContent = paragraph;
+    outcomeSection.appendChild(p);
+  });
+}

@@ -172,6 +172,18 @@ body {
 .about-panel {
   border: 4px solid var(--green);
   padding: calc(var(--pixel) * 4);
+  line-height: 1.6;
+}
+
+.about-skills{
+  line-height: 1.6;
+}
+.about-experience{
+  line-height: 1.6;
+}
+
+.about-future{
+  line-height: 1.6;
 }
 
 /* MODAL */
@@ -227,6 +239,7 @@ body {
 
 .project-header {
   margin-bottom: calc(var(--pixel) * 6);
+  line-height: 1.6;
 }
 
 .project-tagline {
@@ -266,12 +279,17 @@ body {
 }
 
 .project-section ul {
-  line-height: 1.6;
+  line-height: 1.9;
 }
 
 .project-section h2 {
   margin-bottom: calc(var(--pixel) * 2);
 }
+
+.project-title{
+  line-height: 1.6;
+}
+
 
 .project-gallery {
   display: grid;
